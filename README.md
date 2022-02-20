@@ -31,7 +31,7 @@
 
 ### Loader
 
-Loader 让 Webpack 能够去处理非 JavaScript 文件 (Webpack 本身只能理解 JavaScript)。
+Loader 让 Webpack 能够去处理非 JavaScript 文件 (Webpack 本身只能理解 JavaScript 和 JSON)。
 
 ### Plugins
 

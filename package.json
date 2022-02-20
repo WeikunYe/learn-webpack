@@ -3,5 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "WeikunYe <weikunye1225@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "4",
+    "webpack-cli": "^4.9.2"
+  }
 }
