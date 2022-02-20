@@ -6,7 +6,7 @@
 
 _⚠ To use css-loader, webpack@5 is required_
 
-[查看文档文档](https://www.npmjs.com/package/css-loader)
+[查看文档](https://www.npmjs.com/package/css-loader)
 
 ## less-loader
 
