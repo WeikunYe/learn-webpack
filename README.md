@@ -1,4 +1,12 @@
-# Webpack Cheatsheet
+# Webpack5实战教程(从入门到精通)
+
+[视频地址](https://www.bilibili.com/video/BV1e7411j7T5)
+
+## 使用指南
+
+- 课程使用的是 `webpack@4`, 我使用的 `webpack@5`
+- 版本区别导致有些配置代码不一样, 我把和课程不一样的地方都标注在每个分P目录下的 `README.md`
+- 课程使用的是 `npm`, 这里使用的是 `yarn`，如果想用 `npm` 删掉 `yarn.lock` 再 `npm install` 即可
 
 ## Webpack 是什么
 
