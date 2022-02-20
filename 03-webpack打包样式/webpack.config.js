@@ -32,6 +32,16 @@ module.exports = {
                     // 将css文件编译成commonjs模块加载在js中，里面的内容是样式字符串
                     "css-loader"
                 ]
+            },
+            {
+                // 匹配 less 文件
+                test: /\.less$/,
+                use:[
+                    "style-loader",
+                    "css-loader",
+                    // 将 less 编译为 css
+                    "less-loader"
+                ]
             }
         ]
     },
