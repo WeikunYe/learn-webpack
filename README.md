@@ -8,6 +8,10 @@
 - 🛑🛑🛑版本区别导致有些配置代码不一样, 我把和课程不一样的地方都标注在每个分P目录下的 `README.md` **请一定要先看每个目录下的 README**🛑🛑🛑
 - 课程使用的是 `npm`, 这里使用的是 `yarn`，如果想用 `npm` 删掉 `yarn.lock` 再 `npm install` 即可
 
+## 已知问题
+
+- 🛑09&10 兼容 css 有时候 build 出来 的 css 没有兼容 `display: flex`, 个人感觉是 NODE_ENV 和 webpack mode 没有配置好. 同样 11 是 复制 09&10 的配置, 也有这个问题。
+
 ## Webpack 是什么
 
 定义：**Webpack 是一种前端资源构建工具，一个静态模块打包器 (module bundler)。**
