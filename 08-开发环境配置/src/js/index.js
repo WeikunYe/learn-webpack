@@ -1,8 +1,8 @@
-import "../styles/iconfont.css";
-import "../styles/index.less"
+import '../styles/iconfont.css';
+import '../styles/index.less';
 
-function add(a, b){
-    return a+b;
+function add(a, b) {
+  return a + b;
 }
 
-console.log(add(1, 2))
+console.log(add(1, 2));
