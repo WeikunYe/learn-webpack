@@ -6,7 +6,7 @@ webpack@5 内置 file-loader 只需定义 `type` 即可
 
 ```javascript
 {
-    exclude: /\.(html|js|css)/,
+    exclude: /\.(html|js|css)$/,
     type: "asset/resource",
 }
 ```

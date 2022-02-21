@@ -27,7 +27,7 @@ module.exports={
             // 配置资源输出文件名和目录用 generator filename
             {
                 //test: /\.(eot|svg|ttf|woff)$/,
-                exclude: /\.(html|js|css)/,
+                exclude: /\.(html|js|css)$/,
                 type: "asset/resource",
                 generator: {
                     filename: "assets/[hash:10][ext]"
