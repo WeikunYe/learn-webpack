@@ -10,7 +10,7 @@
 
 ## 已知问题
 
-- 🛑09&10 兼容 css 有时候 build 出来 的 css 没有兼容 `display: flex`, 个人感觉是 NODE_ENV 和 webpack mode 没有配置好. 同样 11 是 复制 09&10 的配置, 也有这个问题。
+- 🛑 09&10-兼容css: 有时候 build 出来的 css 没有兼容 `display: flex`, 个人感觉是 NODE_ENV 和 webpack mode 没有配置好。 同样 11 是复制 09&10 的配置, 也有这个问题。
 
 ## Webpack 是什么
 
