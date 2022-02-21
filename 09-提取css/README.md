@@ -40,6 +40,6 @@ module.exports = {
 
 `and` 是 intersection 操作: `> .5% and last 2 versions` 意思是 既要满足`> .5%` 而且要满足 `last 2 versions` 的浏览器, 相当于取交集 (类似于 `if(a && b)`)
 
-可以在终端运行 `npx browserslist` + `'query'` 来测试 例如 `npx browserslist '> .5%`
+可以在终端运行 `npx browserslist` + `'query'` 来测试 例如 `npx browserslist '> .5%'`
 
 注意要定期更新本地 browserslist: `npx browserslist@latest --update-db`
