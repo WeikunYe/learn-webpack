@@ -1,5 +1,7 @@
 # 备注
 
+09-提取 css 和 兼容性处理做一起了
+
 ## postcss-loader
 
 webpack@5 配置稍微有些变化 参考 `webpack.config.js`
