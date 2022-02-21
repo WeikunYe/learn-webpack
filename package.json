@@ -1,5 +1,6 @@
 {
-  "name": "webpack",
+  "name": "learn-webpack5",
+  "description": "尚硅谷新版Webpack5实战教程(从入门到精通)",
   "version": "1.0.0",
   "main": "index.js",
   "author": "WeikunYe <weikunye1225@gmail.com>",
@@ -11,9 +12,23 @@
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
     "mini-css-extract-plugin": "^2.5.3",
+    "postcss-loader": "^6.2.1",
+    "postcss-preset-env": "^7.4.1",
     "style-loader": "^3.3.1",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
+  },
+  "browserslist": {
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ],
+    "production": [
+      "> 0.2%",
+      "not dead",
+      "not op_mini all"
+    ]
   }
 }
