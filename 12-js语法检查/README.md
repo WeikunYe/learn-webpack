@@ -12,9 +12,9 @@
 
 停止 unexpected console statement 警告可以创建一个 .eslntrc.js 文件，配置 "no-console: off"
 
-不要直接 disable-next-line 因为该声明会忽略任何错误：例如下一行不仅有 unexpected console statement 错误，那么其他错误也被忽略了。
+不要直接 disable-next-line 因为该声明会忽略下一行的任何错误
 
-建议还是使用 eslint 规则合理配置
+还是使用 eslint 规则合理配置
 
 ```javascript
 // .eslntrc.js

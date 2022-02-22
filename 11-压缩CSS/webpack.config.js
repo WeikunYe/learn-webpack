@@ -3,8 +3,7 @@ const HTMLWebpackPlugins = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const postcssPresetEnv = require('postcss-preset-env');
 // 不要用这个 官方文档建议 webpack@5 使用 css-minimizer-webpack-plugin
-// 其实用 css-minimizer-webpack-plugin 压缩, 但是执行过程中会有一个 DeprecationWarning
-// 所以最好还是用 optimize-css-assets-webpack-plugin 官方文档推荐的 css-minimizer-webpack-plugin
+// 其实用 css-minimizer-webpack-plugin 压缩可以成功, 但是执行过程中会有一个 DeprecationWarning
 // const OptimizeCssAssetsWebpackPlugin = require("optimize-css-assets-webpack-plugin");
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
