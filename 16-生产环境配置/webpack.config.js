@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const postcssPresetEnv = require('postcss-preset-env');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 process.env.NODE_ENV = 'production';
 
@@ -13,7 +14,7 @@ process.env.NODE_ENV = 'production';
 // 4. css-minimizer-webpack-plugin: 压缩 css 注意这里 webpack@5 写法不同
 
 // JS 处理
-// 1. eslint-loader
+// 1. eslint-webpack-plugin: 注意 webpack@5 不再使用 eslint-loader
 
 // 复用 css loader
 const commonCssLoader = [MiniCssExtractPlugin.loader,
@@ -51,11 +52,48 @@ module.exports = {
           'less-loader',
         ],
       },
-      // js lint
       {
         test: /\.js$/i,
         exclude: /node_modules/,
-        loader: 'eslint-loader',
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            [
+              '@babel/preset-env',
+              {
+                useBuiltIns: 'usage',
+                corejs: {
+                  version: 3,
+                },
+                targets: {
+                  chrome: '60',
+                  firefox: '60',
+                  ie: '9',
+                  safari: '10',
+                  edge: '11',
+                },
+              },
+            ],
+          ],
+        },
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'static/[hash:10][ext][query]',
+        },
+      },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
+      {
+        exclude: /\.(js|less|css|html|png|jpg|gif)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'static/[hash:10][ext][query]',
+        },
       },
     ],
   },
@@ -65,6 +103,14 @@ module.exports = {
     }),
     new ESLintPlugin({
       fix: true,
+      files: 'src/js/*.js',
+    }),
+    new HTMLWebpackPlugin({
+      template: './src/index.html',
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+      },
     }),
   ],
   optimization: {

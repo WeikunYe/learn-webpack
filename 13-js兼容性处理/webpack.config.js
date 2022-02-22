@@ -54,6 +54,7 @@ module.exports = {
       template: './src/index.html',
     }),
     new ESLintPlugin({
+      fix: true,
       files: 'src/js/*.js',
     }),
   ],

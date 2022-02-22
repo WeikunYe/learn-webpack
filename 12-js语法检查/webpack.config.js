@@ -34,6 +34,7 @@ module.exports = {
     // 安装 eslint eslint-webpack-plugin eslint-config-airbnb-base eslint-plugin-import
     // files 指定需要检查的 js 文件, 我们项目 js 都放在了 src/js/ 下
     new ESLintPlugin({
+      fix: true,
       files: 'src/js/*.js',
     }),
   ],
