@@ -81,7 +81,7 @@ module.exports = {
         test: /\.(png|jpg|gif)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'static/[hash:10][ext][query]',
+          filename: 'imgs/[hash:10][ext][query]',
         },
       },
       {
@@ -92,7 +92,7 @@ module.exports = {
         exclude: /\.(js|less|css|html|png|jpg|gif)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'static/[hash:10][ext][query]',
+          filename: 'media/[hash:10][ext][query]',
         },
       },
     ],
