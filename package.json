@@ -23,6 +23,7 @@
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
     "mini-css-extract-plugin": "^2.5.3",
+    "nodemon": "^2.0.15",
     "postcss-loader": "^6.2.1",
     "postcss-preset-env": "^7.4.1",
     "style-loader": "^3.3.1",
@@ -44,5 +45,8 @@
   },
   "eslintConfig": {
     "extends": "airbnb-base"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
   }
 }

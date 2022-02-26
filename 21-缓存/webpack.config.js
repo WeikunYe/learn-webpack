@@ -7,6 +7,12 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 process.env.NODE_ENV = 'production';
 
+// babel缓存
+// 文件缓存
+//  1. hash文件名，每次打包一个哈希值，修改后所有文件名都变了
+//  2. chunkhash文件名，同一个chunk，哈希值一样，但index为入口下面引入的依赖同属于一个chunk所以不行
+//  3. contenthash文件名，文件内容生成哈希值
+
 const commonCssLoader = [MiniCssExtractPlugin.loader,
   'css-loader',
   {
@@ -24,7 +30,7 @@ const commonCssLoader = [MiniCssExtractPlugin.loader,
 module.exports = {
   entry: './src/js/index.js',
   output: {
-    filename: 'built.js',
+    filename: 'built.[contenthash:10].js',
     path: resolve(__dirname, 'build'),
   },
   module: {
@@ -96,7 +102,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/built.css',
+      filename: 'css/built.[contenthash:10].css',
     }),
     new ESLintPlugin({
       fix: true,
