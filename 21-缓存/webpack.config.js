@@ -30,16 +30,11 @@ module.exports = {
   module: {
     rules: [
       {
-        // 一下loader只会匹配一个
-        // 不能有两个loader处理一类文件
-        // webpack 5 用的是 eslint plugin 没有用 eslint loader 所以不用提取
         oneOf: [
           // 处理 css
           {
             test: /\.css$/i,
-            use: [
-              ...commonCssLoader,
-            ],
+            use: [...commonCssLoader],
           },
           // 处理 less
           {
@@ -72,6 +67,10 @@ module.exports = {
                   },
                 ],
               ],
+              // 开启缓存
+              // 第一次构建
+              // 第二次开始读取缓存
+              cacheDirectory: true,
             },
           },
           {

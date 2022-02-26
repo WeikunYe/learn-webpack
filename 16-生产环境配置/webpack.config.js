@@ -22,13 +22,14 @@ const commonCssLoader = [MiniCssExtractPlugin.loader,
   {
     loader: 'postcss-loader',
     options: {
-      plugins: [
-        postcssPresetEnv(),
-      ],
+      postcssOptions: {
+        plugins: [
+          postcssPresetEnv(),
+        ],
+      },
     },
   },
 ];
-
 module.exports = {
   entry: './src/js/index.js',
   output: {
