@@ -44,11 +44,15 @@
     ]
   },
   "eslintConfig": {
-    "extends": "airbnb-base"
+    "extends": "airbnb-base",
+    "env": {
+      "browser": true
+    }
   },
   "dependencies": {
     "express": "^4.17.3",
-    "jquery": "^3.6.0"
+    "jquery": "^3.6.0",
+    "workbox-webpack-plugin": "^6.5.1"
   },
   "sideEffects": [
     "*.css"
