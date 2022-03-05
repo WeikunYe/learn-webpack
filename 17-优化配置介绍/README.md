@@ -14,4 +14,7 @@
     - dll
   - 优化代码性能
     - 缓存 (hash--chunkhash--contenthash)
-    -
+    - code split
+    - tree shaking
+    - 懒加载/预加载
+    - PWA
